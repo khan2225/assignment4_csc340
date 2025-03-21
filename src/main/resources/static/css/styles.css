@@ -1,0 +1,163 @@
+/* styles.css - Merged Lion King theme with Pure CSS */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFCC33; /* Warm yellow background */
+    color: #663300; /* Dark brown text for readability */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #111;
+}
+
+.l-box {
+    padding: 2em;
+}
+
+nav {
+    background-color: #FF9900; /* Deep orange navigation bar */
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background: #FFF3CC; /* Soft warm yellow */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.details-container img {
+    width: 75%;
+       margin: 0 auto;
+       padding: 50px;
+       background: #FFF3CC; /* Soft warm yellow */
+       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+       border-radius: 20px;
+       text-align: center;
+       height: auto;
+}
+
+.description-box {
+   background: #FFF3CC; /* Soft warm yellow */
+   padding: 15px;
+   margin-top: 20px;
+   border-radius: 10px;
+   text-align: center;
+   width: 80%;
+   max-width: 800px;
+   margin-left: auto;
+   margin-right: auto;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.photo-box, .text-box {
+    overflow: hidden;
+    position: relative;
+    height: auto;
+    min-height: 250px;
+    text-align: center;
+    background: #FFB84D; /* Light orange for photo cards */
+    padding: 15px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    width: 30%;
+}
+
+.photo-box img {
+    max-width: 100%;
+    height: auto;
+    min-height: unset;
+    border-radius: 5px;
+    border: 3px solid #FF6600; /* Lion King orange */
+}
+
+.photo-box aside {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 1em 0.5em;
+    color: white;
+    width: 100%;
+    font-size: 80%;
+    text-align: right;
+    background: linear-gradient(to bottom, rgba(16,27,30,0) 0%,rgba(12,2,2,1) 90%);
+}
+
+.photo-box aside span {
+    color: #aaa;
+}
+
+.photo-box aside span a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.text-box {
+    background: rgb(49, 49, 49); /* bluish grey */
+    color: rgb(255, 190, 94); /* steel blue */
+}
+
+.text-box-head {
+    color: #fff;
+    padding-bottom: 0.2em;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 24px;
+}
+
+.text-box-subhead {
+    font-weight: normal;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.form-box {
+    text-align: center;
+    font-size: 120%;
+    border-bottom: 1px solid #eee;
+}
+
+.form-box .pure-button {
+    background-color: #61B842;
+    color: white;
+    vertical-align: top;
+    font-size: 85%;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 4px;
+    margin: 0.3em;
+}
+
+.pure-form input[type] {
+    margin: 0.3em auto;
+    text-align: center;
+}
+
+.footer {
+    background: #CC6600; /* Dark orange footer */
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 80%;
+}
