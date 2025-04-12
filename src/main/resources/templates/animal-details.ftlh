@@ -53,7 +53,11 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                <a href="#" id="confirm-delete" class="btn btn-danger">Yes, Delete</a>
+                <form id="delete-form" method="POST">
+                    <input type="hidden" name="_method" value="post">
+                    <button type="submit" class="btn btn-danger">Yes, Delete</button>
+                </form>
+
             </div>
         </div>
     </div>
@@ -64,11 +68,13 @@
         document.querySelectorAll(".delete-btn").forEach(button => {
             button.addEventListener("click", function () {
                 const animalId = this.getAttribute("data-id");
-                document.getElementById("confirm-delete").href = `/animals/delete/${animalId}`;
+                const form = document.getElementById("delete-form");
+                form.action = `/animals/delete/${animalId}`;
             });
         });
     });
 </script>
+
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

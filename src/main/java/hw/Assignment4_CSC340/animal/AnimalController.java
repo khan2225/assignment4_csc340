@@ -183,16 +183,14 @@ public class AnimalController {
      * Delete an Animal.
      * URL: http://localhost:8080/animals/delete/{id}
      */
-    @DeleteMapping("/delete/{id}")
-    @ResponseBody
-    public ResponseEntity<String> deleteAnimal(@PathVariable int id) {
+    @GetMapping("/delete/{id}")
+    public String deleteAnimal(@PathVariable int id) {
         boolean isDeleted = animalService.deleteAnimal(id);
 
-        if (isDeleted) {
-            return ResponseEntity.ok("Animal deleted successfully");
-        } else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Animal not found");
+        if (!isDeleted) {
+            System.out.println("Animal with ID " + id + " not found for deletion.");
         }
+            return "redirect:/animals/all";
     }
 
 

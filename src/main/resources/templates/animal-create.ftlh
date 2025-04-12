@@ -35,7 +35,7 @@
     <input type="file" id="imageFile" name="imageFile" class="form-control mb-2"/>
 
     <button type="submit" class="btn btn-success">Save Animal</button>
-    <a href="/animal/all" class="btn btn-danger">Cancel</a>
+    <a href="/animals/all" class="btn btn-danger">Cancel</a>
   </form>
 </div>
 
