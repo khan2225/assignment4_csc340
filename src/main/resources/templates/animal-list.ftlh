@@ -12,7 +12,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #FF9900;">
     <a class="navbar-brand" href="#">Search All Animals</a>
     <div class="ms-auto">
-        <a href="/index.html" class="btn btn-light">Home</a>
+        <a href="/animals/all" class="btn btn-light">Home</a>
     </div>
 </nav>
 
@@ -59,9 +59,9 @@
             <td>
                 <a href="/animals/${animal.animalId?c}" class="btn btn-info btn-sm">Details</a>
                 <a href="/animals/update/${animal.animalId?c}" class="btn btn-warning btn-sm">Update</a>
-                <button class="btn btn-danger btn-sm delete-btn" data-id="${animal.animalId?c}">
-                    Delete
-                </button>
+                <form action="/animals/delete/${animal.animalId?c}" method="post" style="display:inline;">
+                    <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this animal?')">Delete</button>
+                </form>
             </td>
         </tr>
         </#list>
@@ -70,7 +70,7 @@
 
     <!-- Go Back Button -->
     <div class="text-center mt-3">
-        <a href="/index.html" class="btn btn-secondary">Go Back</a>
+        <a href="/animals/all" class="btn btn-secondary">Go Back</a>
     </div>
 </div>
 
@@ -81,23 +81,15 @@
                 const animalId = this.getAttribute("data-id");
 
                 if (confirm("Are you sure you want to delete this animal?")) {
-                    fetch(`/animals/delete/${animalId}`, {
-                        method: "DELETE"  // ✅ Change from GET to DELETE
-                    })
-                    .then(response => {
-                        if (response.ok) {
-                            alert("Animal deleted successfully!");
-                            window.location.reload(); // ✅ Refresh the page
-                        } else {
-                            alert("Error: Unable to delete animal.");
-                        }
-                    })
-                    .catch(error => console.error("Error deleting animal:", error));
+                    //Redirect to delete endpoint (GET)
+                    window.location.href = `/animals/delete/${animal.animalId}`;
                 }
             });
         });
     });
 </script>
+
+
 
 
 <!-- Bootstrap JS -->
